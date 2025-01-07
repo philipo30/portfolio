@@ -7,8 +7,6 @@ tags: "Introduction, Blogging, Personal"
 
 Hello World!
 
-September 7, 2024
-
 Welcome to my blog! This is my very first post, and I’m excited to use it as a playground to test out Markdown syntax and see how everything looks. Over time, I’ll be sharing updates on my pet projects, musings on technology, and maybe even a few personal stories. Whether it’s a deep dive into a coding project or a reflection on the latest tech trends, I hope to make this blog a mix of meaningful and lighthearted content.
 
 ## What’s This Blog About?
@@ -33,13 +31,14 @@ console.log("Hello, World!");
 }
 ```
 
-To add a little visual flair, here’s an image of a cozy workspace to inspire productivity:
+To add a little visual flair, here are some images of a cozy workspace to inspire productivity:
 
-<Image
-  src="/photos/workspace.jpg"
-  alt="Cozy Workspace"
-  width={500}
-  height={400}
+<ImageGrid
+  columns={3} // Accepts 2, 3, or 4 columns
+  images={[
+    { src: "/photos/cozyworkspace1.jpg", alt: "Cozy workpsace 1", href: "https://www.reddit.com/r/Workspaces/comments/10jop71/my_cozy_mac_setup_for_programming_thoughts/" },
+    { src: "/photos/cozyworkspace2.jpg", alt: "Cozy workpsace 2", href: "https://www.reddit.com/r/Workspaces/comments/10jop71/my_cozy_mac_setup_for_programming_thoughts/" },
+  ]}
 />
 
 <Caption>
