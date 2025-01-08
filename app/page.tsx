@@ -1,68 +1,100 @@
 import Image from "next/image";
+import Link from "next/link";
 import { socialLinks } from "./config";
+import { FaGithub, FaDiscord } from "react-icons/fa6";
+import { TbMailFilled } from "react-icons/tb";
+import { SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiPython, SiJavascript } from "react-icons/si";
+import { FeaturedProjects } from "app/components/FeaturedProjects";
+import { PageTransition } from "app/components/PageTransition";
+
+const TechStack = () => {
+  const technologies = [
+    { icon: SiTypescript, name: "TypeScript" },
+    { icon: SiJavascript, name: "JavaScript" },
+    { icon: SiReact, name: "React" },
+    { icon: SiNextdotjs, name: "Next.js" },
+    { icon: SiTailwindcss, name: "Tailwind" },
+    { icon: SiPython, name: "Python" },
+  ];
+
+  return (
+    <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 my-8">
+      {technologies.map((tech, index) => (
+        <div key={index} className="flex flex-col items-center group">
+          <tech.icon className="w-8 h-8 mb-2 text-gray-700 dark:text-gray-300 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors" />
+          <span className="text-sm text-gray-600 dark:text-gray-400">{tech.name}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export default function Page() {
   return (
-    <section>
-      <a href={socialLinks.twitter} target="_blank">
-        <Image
-          src="/profile.png"
-          alt="Profile photo"
-          className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0"
-          unoptimized
-          width={160}
-          height={160}
-          priority
-        />
-      </a>
+    <PageTransition>
+      <section>
+        <div className="flex flex-col sm:flex-row items-start gap-8 mb-8">
+          <div className="flex items-center gap-4 sm:sticky sm:top-4">
+            <Image
+              src="/profile.png"
+              alt="Profile"
+              width={150}
+              height={150}
+              priority
+              className="rounded-full border-2 border-gray-200 dark:border-gray-800 transition-transform hover:scale-105"
+            />
+            <div className="flex flex-col gap-3">
+              <a
+                href={socialLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+              >
+                <FaGithub size={24} />
+              </a>
+              <a
+                href={socialLinks.discord}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+              >
+                <FaDiscord size={24} />
+              </a>
+              <a
+                href={socialLinks.email}
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+              >
+                <TbMailFilled size={24} />
+              </a>
+            </div>
+          </div>
 
-      <h1 className="mb-8 text-2xl font-medium tracking-tight">
-        Portfolio, made simple!
-      </h1>
+          <div className="flex-1">
+            <h2 className="text-gray-700 dark:text-gray-200 mb-4 text-lg">
+              Fullstack Developer
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-8">
+              Building digital experiences with modern web technologies.
+              Based in Germany, focused on creating efficient and scalable solutions.
+            </p>
 
-      <div className="prose prose-neutral dark:prose-invert">
-        <p>
-          A clean, fast, and lightweight portfolio template built with Next.js,
-          Vercel, and Tailwind CSS for optimal performance.
-        </p>
-        <p>
-          Nextfolio includes all the essentials for a stunning portfolio: SEO,
-          MDX support, RSS, Atom, & JSON feeds, analytics, tweet & YouTube
-          embeds, KaTeX integration, and{" "}
-          <a
-            target="_blank"
-            href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
-          >
-            more
-          </a>
-          .
-        </p>
-        <p>
-          Nextfolio is{" "}
-          <a href={socialLinks.github} target="_blank">
-            open-source
-          </a>{" "}
-          and fully customizable, making it easy to add more features.
-        </p>
-        <p>
-          <a
-            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio"
-            target="_blank"
-          >
-            Deploy
-          </a>{" "}
-          your Nextfolio site with Vercel in minutes and follow the set up
-          instructions in the{" "}
-          <a href="/blog/getting-started">Getting Started</a> post.
-        </p>
-        <p>
-          Built and maintained by{" "}
-          <a href="https://imsirius.xyz/" target="_blank">
-            Sirius
-          </a>
-          .
-        </p>
-      </div>
-    </section>
+            <h3 className="text-xl font-bold mb-2 text-black dark:text-white">Tech Stack</h3>
+            <TechStack />
+
+            <h3 className="text-xl font-bold mb-4 text-black dark:text-white">Featured Projects</h3>
+            <FeaturedProjects />
+            
+            <div className="mt-8">
+              <Link 
+                href="/projects"
+                className="inline-block px-4 py-2 rounded-md bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+              >
+                View All Projects →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </PageTransition>
   );
 }

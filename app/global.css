@@ -149,3 +149,31 @@ table {
 .title {
   text-wrap: balance;
 }
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-image {
+  max-height: 85vh;
+  max-width: 85vw;
+  object-fit: contain;
+}
+
+.prose ul li {
+  margin-top: 0.2em !important;
+  margin-bottom: 0.2em !important;
+}
+
+.prose ul {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+
+.tech-stack-icon {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.tech-stack-icon:hover {
+  @apply transform scale-110;
+}
