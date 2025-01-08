@@ -12,5 +12,6 @@ export const socialLinks = {
   github: "https://github.com/philipo30",
   instagram: "#",
   linkedin: "#",
+  discord: "https://discordapp.com/users/884457992026722315",
   email: "mailto:philip30business@gmail.com",
 };
