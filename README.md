@@ -7,7 +7,7 @@ Deploy your Nextfolio site with Vercel in minutes.
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fphilipo30%2Fportfolio)
 
 ### Note:
-> This is a custom configured version of https://github.com/1msirius/Nextfolio! All credits to him, i just added some small features such as filters, search and better homepage.
+> This is a custom configured version of https://github.com/1msirius/Nextfolio! All credits to 1msirius (♥️Thx), i just added some small features such as filters, search and better homepage.
 
 ## Technologies Used
 
@@ -53,6 +53,7 @@ The server will be running at [http://localhost:3000](http://localhost:3000).
 1. Update the site metadata and social links in `app/config.ts` to set up SEO, feeds, social links, and Open Graph settings.
 2. Update your routes in `app/sitemap.ts` for SEO optimization.
 3. Update your blog posts in the `/content` folder.
+4. Update your project posts in `/app/projects/project-data.tsx`
 
 For more information about configuration, follow the instructions in the [Getting Started](https://nextfolio-template.vercel.app/blog/getting-started#configuration) post.
 
