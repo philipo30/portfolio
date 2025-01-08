@@ -10,10 +10,11 @@ export default function Projects() {
   const [statusFilter, setStatusFilter] = useState('all');
   const [categoryFilter, setCategoryFilter] = useState('all');
   
-  const categories = useMemo(() => 
-    ['all', ...new Set(projects.flatMap(p => p.category))],
-    []
-  );
+  const categories = useMemo(() => {
+    const categorySet = new Set<string>();
+    projects.forEach(p => p.category.forEach(cat => categorySet.add(cat)));
+    return ['all', ...Array.from(categorySet)];
+  }, []);
 
   const filteredProjects = projects.filter(project => {
     const matchesStatus = statusFilter === 'all' || project.status === statusFilter;
