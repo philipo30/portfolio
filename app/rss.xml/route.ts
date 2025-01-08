@@ -7,7 +7,8 @@ export async function GET() {
   return new NextResponse(rss, {
     headers: {
       'Content-Type': 'application/xml; charset=utf-8',
-      'Cache-Control': 's-maxage=3600, stale-while-revalidate',
+      'Cache-Control': 'public, s-maxage=1200, stale-while-revalidate=600',
+      'Access-Control-Allow-Origin': '*',
     },
   });
 } 
