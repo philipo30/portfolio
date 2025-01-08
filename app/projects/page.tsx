@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import { projects } from "./project-data";
+import { projects, Project } from "./project-data";
 import { ProjectModal } from "app/components/ProjectModal";
 import { PageTransition } from "app/components/PageTransition";
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [statusFilter, setStatusFilter] = useState('all');
   const [categoryFilter, setCategoryFilter] = useState('all');
   
