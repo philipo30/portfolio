@@ -27,7 +27,6 @@ export function generateRssFeed() {
       atom: `${baseUrl}/atom.xml`,
     },
     author,
-    styleSheet: '/rss.xsl',
   });
 
   const posts = getBlogPosts();
