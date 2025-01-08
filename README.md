@@ -6,6 +6,9 @@ Deploy your Nextfolio site with Vercel in minutes.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio)
 
+### Note:
+> This is a custom configured version of https://github.com/1msirius/Nextfolio! All credits to him, i just added some small features such as filters, search and better homepage.
+
 ## Technologies Used
 
 - Framework: [Next.js](https://nextjs.org/)
@@ -34,7 +37,7 @@ Nextfolio uses [pnpm](https://pnpm.io/installation) for dependency management, s
 Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
 
 ```
-pnpm create next-app --example https://github.com/1msirius/Nextfolio my-portfolio
+pnpm create next-app --example https://github.com/philipo30/portfolio my-portfolio
 ```
 
 Start the development server:
