@@ -3,7 +3,7 @@ export function RssSubscribe() {
   const subscribeLinks = [
     {
       name: 'Feedly',
-      url: `https://feedly.com/i/subscription/feed/${encodeURIComponent(rssUrl)}`,
+      url: `https://feedly.com/i/feed/${encodeURIComponent(rssUrl)}`,
       icon: '📱'
     },
     {
@@ -13,7 +13,7 @@ export function RssSubscribe() {
     },
     {
       name: 'Inoreader',
-      url: `https://www.inoreader.com/feed/${encodeURIComponent(rssUrl)}`,
+      url: `https://www.inoreader.com/?add_feed=${encodeURIComponent(rssUrl)}`,
       icon: '📚'
     }
   ];
