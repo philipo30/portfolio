@@ -4,7 +4,7 @@ A clean, fast, and lightweight portfolio template built with [Next.js](https://n
 
 Deploy your Nextfolio site with Vercel in minutes.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fphilipo30%2Fportfolio)
 
 ### Note:
 > This is a custom configured version of https://github.com/1msirius/Nextfolio! All credits to him, i just added some small features such as filters, search and better homepage.
