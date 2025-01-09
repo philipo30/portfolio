@@ -25,7 +25,7 @@ export const projects: Project[] = [
     status: 'maintained',
     category: ['Web Development', 'Nextjs', 'TypeScript', 'Javascript'],
   },
-  {/* {
+  /* {
     title: "Project Two",
     year: 2022,
     description:
@@ -43,5 +43,5 @@ export const projects: Project[] = [
     status: 'maintained',
     category: ['Web Development', 'React', 'TypeScript'],
   },
-  */}
+  */
 ];
