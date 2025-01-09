@@ -23,7 +23,7 @@ Deploy your Nextfolio site with Vercel in minutes.
 - **Light and Dark Mode Toggle**: Switch between themes for better readability.
 - **Dynamic [OG Images](https://vercel.com/docs/functions/og-image-generation)**: Auto-generate Open Graph images for sharing.
 - **SEO Optimization**: Enhance search visibility with sitemap, robots.txt, and JSON-LD schema.
-- **Dynamic Feed Generation**: Automatic dynamic [RSS](https://nextfolio-template.vercel.app/rss.xml), [Atom](https://nextfolio-template.vercel.app/atom.xml), and [JSON](https://nextfolio-template.vercel.app/feed.json) feeds.
+- **Dynamic Feed Generation**: Automatic dynamic [RSS](https://nextfolio-template.vercel.app/rss.xml), [Atom](https://philip30.vercel.app/atom.xml), and [JSON](https://philip30.vercel.app/feed.json) feeds.
 - **[KaTeX](https://katex.org/) Integration**: Render mathematical expressions smoothly.
 - **Performance Tracking**: Monitor web performance with [Vercel Web Analytics](https://vercel.com/docs/speed-insights) and [Speed Insights](https://vercel.com/docs/speed-insights).
 - **Interactive Embeds**: Easily embed interactive tweets and YouTube videos.
@@ -55,7 +55,7 @@ The server will be running at [http://localhost:3000](http://localhost:3000).
 3. Update your blog posts in the `/content` folder.
 4. Update your project posts in `/app/projects/project-data.tsx`.
 
-For more information about configuration, follow the instructions in the [Getting Started](https://nextfolio-template.vercel.app/blog/getting-started#configuration) post.
+For more information about configuration, follow the instructions in the [Getting Started](https://philip30.vercel.app/blog/getting-started#configuration) post.
 
 ## Contributing
 
