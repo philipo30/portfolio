@@ -22,7 +22,7 @@ export const projects: Project[] = [
     image: "/photos/photo1.jpg",
     technologies: ["Nextjs", "TypeScript", "Javascript", "Tailwind"],
     featured: true,
-    status: 'completed',
+    status: 'maintained',
     category: ['Web Development', 'Nextjs', 'TypeScript', 'Javascript'],
   },
   {/* {
