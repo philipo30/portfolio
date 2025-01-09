@@ -1,15 +1,19 @@
 ---
 title: "Getting Started with Nextfolio"
-publishedAt: "2024-01-6"
+publishedAt: "2024-01-06"
 summary: "Instructions to build and configure your Nextfolio portfolio."
 tags: "Configuration, Web development"
 ---
 
 Nextfolio includes all the essentials for a stunning portfolio website.
 
-Start by [deploying](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio) your portfolio with Vercel in minutes, or fork the [repository](https://github.com/1msirius/Nextfolio) and follow the instructions below to set it up.
+Start by [deploying](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fphilipo30%2Fportfolio) your portfolio with Vercel in minutes, or fork the [repository](https://github.com/philipo30/portfolio) and follow the instructions below to set it up.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio)
+
+### Note:
+> This is a custom configured version of https://github.com/1msirius/Nextfolio! All credits to 1msirius (♥️Thx), i just added some small features such as filters, search and better homepage.
+
 
 ## Installation
 
@@ -18,7 +22,7 @@ Nextfolio uses [pnpm](https://pnpm.io/installation) for dependency management, s
 Execute [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
 
 ```
-pnpm create next-app --example https://github.com/1msirius/Nextfolio my-portfolio
+pnpm create next-app --example https://github.com/philipo30/portfolio my-portfolio
 ```
 
 Start the development server:
@@ -39,9 +43,9 @@ Update the site metadata and social links in the **app/config.ts** file. These c
 
 ```
 export const metaData = {
-  baseUrl: "https://nextfolio-template.vercel.app", // Update with your site base URL
-  title: "Nextfolio", // Update with your site title
-  name: "Sirius", // Update with your name
+  baseUrl: "https://philip30.vercel.app", // Update with your site base URL
+  title: "Philip30", // Update with your site title
+  name: "Philip", // Update with your name
   ogImage: "/opengraph-image.png", // Update with your Open Graph image
   description:
     "A clean, fast, and lightweight portfolio template built with Next.js, Vercel, and Tailwind CSS for optimal performance.", // Update with your site description
@@ -49,7 +53,7 @@ export const metaData = {
 
 export const socialLinks = {
   twitter: "https://x.com/1tssirius", // Update with your Twitter URL
-  github: "https://github.com/1msirius/Nextfolio", // Update with your GitHub URL
+  github: "https://github.com/philipo30/portfolio", // Update with your GitHub URL
   instagram: "https://www.instagram.com/", // Update with your Instagram URL
   linkedin: "https://www.linkedin.com/", // Update with your LinkedIn URL
   email: "mailto:example@gmail.com", // Update with your email address
