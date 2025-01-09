@@ -75,7 +75,6 @@ export default function Page() {
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-8">
               Building digital experiences with modern web technologies.
-              Based in Germany, focused on creating efficient and scalable solutions.
             </p>
 
             <h3 className="text-xl font-bold mb-2 text-black dark:text-white">Tech Stack</h3>
