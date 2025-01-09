@@ -13,17 +13,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Project One",
-    year: 2023,
+    title: "This Blog!",
+    year: 2025,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam veritatis dolorem rem praesentium dicta labore, at laudantium quisquam.",
+      "Hey! Thank you for visiting my portfolio and blog! Do you want to modify your own version of this? Go to ",
     url: "https://example.com/",
-    githubUrl: "https://github.com/example/project-one",
+    githubUrl: "https://github.com/philipo30/portfolio",
     image: "/photos/photo1.jpg",
-    technologies: ["React", "TypeScript", "Tailwind"],
+    technologies: ["Nextjs", "TypeScript", "Javascript", "Tailwind"],
     featured: true,
     status: 'completed',
-    category: ['Web Development', 'React', 'TypeScript'],
+    category: ['Web Development', 'Nextjs', 'TypeScript', 'Javascript'],
   },
   {
     title: "Project Two",
