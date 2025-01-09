@@ -16,16 +16,16 @@ export const projects: Project[] = [
     title: "This Blog!",
     year: 2025,
     description:
-      "Hey! Thank you for visiting my portfolio and blog! Do you want to modify your own version of this? Go to ",
-    url: "https://example.com/",
-    githubUrl: "https://github.com/philipo30/portfolio",
+      "Hey! Thank you for visiting my portfolio and blog! Do you want to modify your own version of this? Go to https://github.com/philipo30/portfolio/",
+    url: "https://philip30.vercel.app/",
+    githubUrl: "https://github.com/philipo30/portfolio/",
     image: "/photos/photo1.jpg",
     technologies: ["Nextjs", "TypeScript", "Javascript", "Tailwind"],
     featured: true,
     status: 'completed',
     category: ['Web Development', 'Nextjs', 'TypeScript', 'Javascript'],
   },
-  {
+  {/* {
     title: "Project Two",
     year: 2022,
     description:
@@ -43,4 +43,5 @@ export const projects: Project[] = [
     status: 'maintained',
     category: ['Web Development', 'React', 'TypeScript'],
   },
+  */}
 ];
