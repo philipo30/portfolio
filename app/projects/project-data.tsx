@@ -19,7 +19,7 @@ export const projects: Project[] = [
       "Hey! Thank you for visiting my portfolio and blog! Do you want to modify your own version of this? Go to https://github.com/philipo30/portfolio/",
     url: "https://philip30.vercel.app/",
     githubUrl: "https://github.com/philipo30/portfolio/",
-    image: "/photos/photo1.jpg",
+    image: "/photos/portfolio-project1.png",
     technologies: ["Nextjs", "TypeScript", "Javascript", "Tailwind"],
     featured: true,
     status: 'maintained',
