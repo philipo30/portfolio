@@ -74,7 +74,7 @@ export default function Page() {
               Fullstack Developer
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-8">
-              Building digital experiences with modern web technologies.
+              I like to develop full-stack and discord bots and drink coffee.
             </p>
 
             <h3 className="text-xl font-bold mb-2 text-black dark:text-white">Tech Stack</h3>
