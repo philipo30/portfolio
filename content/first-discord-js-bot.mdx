@@ -1,0 +1,233 @@
+---
+title: "Crafting Your First Discord Bot with Discord.js: A Developer's Adventure"
+publishedAt: "2025-01-6"
+summary: "Learn to build an interactive Discord bot with personality using modern JavaScript and Discord.js v14"
+tags: "Discord Bot, JavaScript, Web Development"
+---
+
+<Callout emoji="🚀">
+  Ready to bring a digital companion to life? In this guide, we'll create a Discord bot that can high-five users, share wisdom, and even tell jokes! No previous bot-building experience required.
+</Callout>
+
+## 🌟 Why Build a Discord Bot?
+
+<Image
+  src="/bot-illustration.png"
+  alt="Friendly robot waving"
+  width={600}
+  height={400}
+/>
+
+Discord bots are the Swiss Army knives of online communities. They can:
+- Automate moderation
+- Deliver memes on demand
+- Create mini-games
+- Integrate with external APIs
+- **Be your server's personal assistant**
+
+## 🛠️ Tools We'll Need
+
+<Table
+  data={{
+    headers: ["Tool", "Purpose"],
+    rows: [
+      ["Node.js", "JavaScript runtime environment"],
+      ["discord.js v14", "Powerful Discord API wrapper"],
+      ["Visual Studio Code", "Code editor"],
+      ["Discord Developer Portal", "Bot configuration"]
+    ]
+  }}
+/>
+
+## 🚦 Getting Started: Bot Setup
+
+### 1. Create Your Bot Identity
+
+1. Visit [Discord Developer Portal](https://discord.com/developers/applications)
+2. Click "New Application"
+3. Navigate to "Bot" > "Add Bot"
+
+<Callout emoji="🔑">
+  Save your bot token immediately! This is your bot's password - never share it or commit it to GitHub.
+</Callout>
+
+### 2. Install Dependencies
+
+```bash
+pnpm init -y
+pnpm install discord.js @discordjs/rest discord-api-types dotenv
+```
+
+## 💻 Bot Anatomy 101
+
+Create `bot.js`:
+
+```javascript
+require('dotenv').config();
+const { Client, GatewayIntentBits } = require('discord.js');
+
+const client = new Client({
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent
+  ]
+});
+
+client.on('ready', () => {
+  console.log(`🤖 ${client.user.tag} is ready for action!`);
+});
+
+client.on('messageCreate', async message => {
+  if (message.content === '!ping') {
+    await message.reply('🏓 Pong!');
+  }
+});
+
+client.login(process.env.DISCORD_TOKEN);
+```
+
+<Callout emoji="💡">
+  Create a `.env` file with DISCORD_TOKEN=your-bot-token to keep credentials safe
+</Callout>
+
+## 🎭 Adding Personality
+
+### Slash Commands Setup
+
+```javascript
+const { SlashCommandBuilder } = require('discord.js');
+
+module.exports = {
+  data: new SlashCommandBuilder()
+    .setName('highfive')
+    .setDescription('Virtual high five!'),
+  async execute(interaction) {
+    await interaction.reply('🖐️ Up top! *smack*');
+  }
+};
+```
+
+### Command Deployment
+
+Create `deploy-commands.js`:
+
+```javascript
+const { REST, Routes } = require('discord.js');
+const commands = [require('./commands/highfive.js').data.toJSON()];
+
+const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
+
+(async () => {
+  try {
+    console.log('🚀 Deploying commands...');
+    await rest.put(
+      Routes.applicationCommands(process.env.CLIENT_ID),
+      { body: commands }
+    );
+    console.log('✅ Commands deployed!');
+  } catch (error) {
+    console.error('❌ Deployment failed:', error);
+  }
+})();
+```
+
+## 🌈 Feature Showcase
+
+<ImageGrid
+  columns={2}
+  images={[
+    { src: "/bot-demo1.png", alt: "High five command" },
+    { src: "/bot-demo2.png", alt: "Ping response" }
+  ]}
+/>
+
+## 🚀 Advanced Features
+
+### Interactive Buttons
+
+```javascript
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+
+client.on('interactionCreate', async interaction => {
+  if (!interaction.isCommand()) return;
+
+  if (interaction.commandName === 'quiz') {
+    const row = new ActionRowBuilder()
+      .addComponents(
+        new ButtonBuilder()
+          .setCustomId('true_btn')
+          .setLabel('True')
+          .setStyle(ButtonStyle.Success),
+        new ButtonBuilder()
+          .setCustomId('false_btn')
+          .setLabel('False')
+          .setStyle(ButtonStyle.Danger)
+      );
+
+    await interaction.reply({
+      content: 'Is JavaScript the best language?',
+      components: [row]
+    });
+  }
+});
+```
+
+### Scheduled Tasks
+
+```javascript
+const cron = require('node-cron');
+
+cron.schedule('0 9 * * *', () => {
+  const channel = client.channels.cache.get('YOUR_CHANNEL_ID');
+  channel.send('🌞 Good morning! Time to code!');
+});
+```
+
+## 📦 Deployment Options
+
+<Table
+  data={{
+    headers: ["Platform", "Pros"],
+    rows: [
+      ["Replit", "Browser-based, free tier"],
+      ["Heroku", "Easy scaling"],
+      ["AWS EC2", "Full control"],
+      ["Raspberry Pi", "24/7 local hosting"]
+    ]
+  }}
+/>
+
+## 🧠 Pro Tips
+
+<Callout emoji="💥">
+  **Bot Optimization Checklist:**
+  - Use proper intents
+  - Handle rate limits
+  - Implement error logging
+  - Use interaction deferring for slow operations
+  - Cache frequently accessed data
+</Callout>
+
+## 🎉 What's Next?
+
+<YouTube videoId="wXhTHyIgQ_U" />
+
+Ready to level up? Explore these ideas:
+- Music streaming capabilities
+- Server analytics dashboard
+- AI-powered chat features
+- Mini-games with leaderboards
+
+$
+\text{BotPower} = \sum_{n=1}^{\infty} \frac{\text{Creativity}^n}{n!}
+$
+
+<Callout emoji="👋">
+  Got questions? Found a cool bot idea? Share your creations with me on [Discord](https://discordapp.com/users/884457992026722315)!
+</Callout>
+
+```javascript
+// End of code journey... or is it just the beginning?
+client.destroy();
+```
